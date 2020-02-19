@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchProducts } from "../store/products/actions";
+import "./Products.css";
 
 class Products extends Component {
   componentDidMount() {
@@ -17,7 +18,7 @@ class Products extends Component {
               <li key={dev.id}>
                 <p>{dev.name}</p>
                 <img src={dev.imageUrl} />
-                <p>{dev.price}</p>
+                <p>€{dev.price}</p>
               </li>
             );
           })}

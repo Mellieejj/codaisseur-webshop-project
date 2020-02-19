@@ -2,181 +2,181 @@
   "products": [
     {
       "id": 1,
-      "categoryId": 4,
-      "name": "Product 1",
-      "imageUrl": "https://picsum.photos/400?image=696",
+      "categoryId": 1,
+      "name": "Dino Baby Teether",
+      "imageUrl": "https://haakdraak.nl/afbeeldingen/kraal-dino.jpg",
       "inStock": true,
-      "price": "3432"
+      "price": "9.95"
     },
     {
       "id": 2,
-      "categoryId": 1,
-      "name": "Product 2",
-      "imageUrl": "https://picsum.photos/400?image=230",
-      "inStock": false,
-      "price": "2374"
+      "categoryId": 4,
+      "name": "Smiley Keychain",
+      "imageUrl": "https://haakdraak.nl/afbeeldingen/sleutel-smile1.jpg",
+      "inStock": true,
+      "price": "2.50"
     },
     {
       "id": 3,
       "categoryId": 4,
-      "name": "Product 3",
-      "imageUrl": "https://picsum.photos/400?image=277",
+      "name": "Duck Keychain",
+      "imageUrl": "https://haakdraak.nl/afbeeldingen/sleutel-enzo.jpg",
       "inStock": false,
-      "price": "1942"
+      "price": "10.00"
     },
     {
       "id": 4,
       "categoryId": 3,
-      "name": "Product 4",
-      "imageUrl": "https://picsum.photos/400?image=963",
+      "name": "Big Monkey",
+      "imageUrl": "https://haakdraak.nl/afbeeldingen/knuf-mike.jpg",
       "inStock": true,
-      "price": "2367"
+      "price": "40.00"
     },
     {
       "id": 5,
       "categoryId": 3,
-      "name": "Product 5",
-      "imageUrl": "https://picsum.photos/400?image=637",
+      "name": "Giraffe",
+      "imageUrl": "https://haakdraak.nl/afbeeldingen/knuf-guus.jpg",
       "inStock": false,
-      "price": "1991"
+      "price": "25"
     },
     {
       "id": 6,
       "categoryId": 3,
-      "name": "Product 6",
-      "imageUrl": "https://picsum.photos/400?image=811",
-      "inStock": true,
-      "price": "1956"
+      "name": "Mini Pinguin Ragdoll",
+      "imageUrl": "https://haakdraak.nl/afbeeldingen/lap-pingumini.jpg",
+      "inStock": false,
+      "price": "12.50"
     },
     {
       "id": 7,
       "categoryId": 2,
-      "name": "Product 7",
-      "imageUrl": "https://picsum.photos/400?image=616",
+      "name": "Monkey Pacifier Cuddle",
+      "imageUrl": "https://haakdraak.nl/afbeeldingen/speen-aap2.jpg",
       "inStock": false,
-      "price": "2005"
+      "price": "15.00"
     },
     {
       "id": 8,
       "categoryId": 4,
-      "name": "Product 8",
-      "imageUrl": "https://picsum.photos/400?image=522",
+      "name": "Cactus Keychain",
+      "imageUrl": "https://haakdraak.nl/afbeeldingen/sleutel-cooper.jpg",
       "inStock": false,
-      "price": "1358"
+      "price": "7.50"
     },
     {
       "id": 9,
       "categoryId": 3,
-      "name": "Product 9",
-      "imageUrl": "https://picsum.photos/400?image=615",
-      "inStock": false,
-      "price": "2345"
+      "name": "Dragon",
+      "imageUrl": "https://haakdraak.nl/afbeeldingen/knuf-draakje.jpg",
+      "inStock": true,
+      "price": "15"
     },
     {
       "id": 10,
       "categoryId": 1,
-      "name": "Product 10",
-      "imageUrl": "https://picsum.photos/400?image=601",
+      "name": "Unicorn Baby Teether",
+      "imageUrl": "https://haakdraak.nl/afbeeldingen/bijt-eenhoorn.jpg",
       "inStock": false,
-      "price": "1823"
+      "price": "12.50"
     },
     {
       "id": 11,
       "categoryId": 1,
-      "name": "Product 11",
-      "imageUrl": "https://picsum.photos/400?image=314",
+      "name": "Baby Teether Monkey",
+      "imageUrl": "https://haakdraak.nl/afbeeldingen/bijt-abel.jpg",
       "inStock": true,
-      "price": "1752"
+      "price": "12.50"
     },
     {
       "id": 12,
       "categoryId": 4,
-      "name": "Product 12",
-      "imageUrl": "https://picsum.photos/400?image=442",
-      "inStock": true,
-      "price": "2196"
+      "name": "IceCream 2 Scopes Keychain",
+      "imageUrl": "https://haakdraak.nl/afbeeldingen/sleutel-2ijsje1.jpg",
+      "inStock": false,
+      "price": "3.00"
     },
     {
       "id": 13,
       "categoryId": 4,
-      "name": "Product 13",
-      "imageUrl": "https://picsum.photos/400?image=338",
+      "name": "Pinguïn Keychain",
+      "imageUrl": "https://haakdraak.nl/afbeeldingen/sleutel-pingu1.jpg",
       "inStock": true,
-      "price": "3276"
+      "price": "7.50"
     },
     {
       "id": 14,
       "categoryId": 4,
-      "name": "Product 14",
-      "imageUrl": "https://picsum.photos/400?image=739",
-      "inStock": false,
-      "price": "1454"
+      "name": "Banana Keychain",
+      "imageUrl": "https://haakdraak.nl/afbeeldingen/sleutel-banaan.jpg",
+      "inStock": true,
+      "price": "7.50"
     },
     {
       "id": 15,
       "categoryId": 4,
-      "name": "Product 15",
-      "imageUrl": "https://picsum.photos/400?image=901",
-      "inStock": false,
-      "price": "1368"
+      "name": "Cherries Keychain",
+      "imageUrl": "https://haakdraak.nl/afbeeldingen/sleutel-kers.JPG",
+      "inStock": true,
+      "price": "3.50"
     },
     {
       "id": 16,
       "categoryId": 3,
-      "name": "Product 16",
-      "imageUrl": "https://picsum.photos/400?image=372",
+      "name": "Mini Monkey Ragdoll",
+      "imageUrl": "https://haakdraak.nl/afbeeldingen/lap-aapmini.jpg",
       "inStock": false,
-      "price": "2087"
+      "price": "12.50"
     },
     {
       "id": 17,
       "categoryId": 1,
-      "name": "Product 17",
-      "imageUrl": "https://picsum.photos/400?image=264",
+      "name": "Rabbit Ears Baby Teether",
+      "imageUrl": "https://haakdraak.nl/afbeeldingen/bijt-konijnoor1.jpg",
       "inStock": true,
-      "price": "2523"
+      "price": "7.50"
     },
     {
       "id": 18,
       "categoryId": 1,
-      "name": "Product 18",
-      "imageUrl": "https://picsum.photos/400?image=133",
-      "inStock": true,
-      "price": "1118"
+      "name": "Baby Teether Triceratops",
+      "imageUrl": "https://haakdraak.nl/afbeeldingen/bijt-triceratops.jpg",
+      "inStock": false,
+      "price": "12.50"
     },
     {
       "id": 19,
       "categoryId": 2,
-      "name": "Product 19",
-      "imageUrl": "https://picsum.photos/400?image=359",
+      "name": "Dragon Pacifier Cuddle",
+      "imageUrl": "https://haakdraak.nl/afbeeldingen/speen-draak.jpg",
       "inStock": false,
-      "price": "1966"
+      "price": "15.00"
     },
     {
       "id": 20,
       "categoryId": 1,
-      "name": "Product 20",
-      "imageUrl": "https://picsum.photos/400?image=354",
+      "name": "Koala Baby Teether",
+      "imageUrl": "https://haakdraak.nl/afbeeldingen/bijt-koala.jpg",
       "inStock": false,
-      "price": "2569"
+      "price": "12.50"
     }
   ],
   "categories": [
     {
       "id": 1,
-      "name": "Category 1"
+      "name": "Baby Teether"
     },
     {
       "id": 2,
-      "name": "Category 2"
+      "name": "Cuddle Cloth"
     },
     {
       "id": 3,
-      "name": "Category 3"
+      "name": "Cuddle Toys"
     },
     {
       "id": 4,
-      "name": "Category 4"
+      "name": "Keychains"
     }
   ]
 }
