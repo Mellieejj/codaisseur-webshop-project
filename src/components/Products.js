@@ -1,4 +1,3 @@
-import SubNavabar from "./SubNavbar";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchProducts } from "../store/products/actions";
@@ -13,12 +12,12 @@ class Products extends Component {
         <p>Products</p>
         <ul>
           {this.props.products.map(dev => {
-            console.log("hello", this.props.products);
+            // console.log("hello", this.props.products);
             return (
-              <li>
-                {dev.name}
+              <li key={dev.id}>
+                <p>{dev.name}</p>
                 <img src={dev.imageUrl} />
-                {dev.price}
+                <p>{dev.price}</p>
               </li>
             );
           })}
