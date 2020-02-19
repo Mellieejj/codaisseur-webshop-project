@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchProducts } from "../store/products/actions";
 import "./Products.css";
+import ProductBox from "./ProductBox";
 
 class Products extends Component {
   componentDidMount() {
@@ -11,7 +12,8 @@ class Products extends Component {
     return (
       <div>
         <p>Products</p>
-        <ul>
+        <ProductBox />
+        {/* <ul>
           {this.props.products.map(dev => {
             // console.log("hello", this.props.products);
             return (
@@ -22,7 +24,7 @@ class Products extends Component {
               </li>
             );
           })}
-        </ul>
+        </ul> */}
       </div>
     );
   }
