@@ -4,21 +4,34 @@ import { connect } from "react-redux";
 import { fetchProducts } from "../store/products/actions";
 
 class Products extends Component {
-  state = {
-    products: []
-  };
   componentDidMount() {
     this.props.dispatch(fetchProducts);
-    console.log(this.state.fetchProducts);
   }
   render() {
-    return <SubNavabar />;
+    return (
+      <div>
+        <p>Products</p>
+        <ul>
+          {this.props.products.map(dev => {
+            console.log("hello", this.props.products);
+            return (
+              <li>
+                {dev.name}
+                <img src={dev.imageUrl} />
+                {dev.price}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
   }
 }
 
 function mapStateToProps(reduxState) {
+  console.log("redux", reduxState.products);
   return {
-    products: reduxState.product
+    products: reduxState.products
   };
 }
 export default connect(mapStateToProps)(Products);
