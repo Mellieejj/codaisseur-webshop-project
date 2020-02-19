@@ -17,7 +17,7 @@ class Products extends Component {
             return (
               <li>
                 {dev.name}
-                {dev.imageUrl}
+                <img src={dev.imageUrl} />
                 {dev.price}
               </li>
             );
