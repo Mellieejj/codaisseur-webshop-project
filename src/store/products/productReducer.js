@@ -1,6 +1,6 @@
 const initialState = [];
 
-function productReducer(state = initialState, action) {
+export default function productReducer(state = initialState, action) {
   console.log(action);
   switch (action.type) {
     case "FETCHED_PRODUCTS": {
