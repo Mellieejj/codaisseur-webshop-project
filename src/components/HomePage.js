@@ -8,7 +8,7 @@ export default class HomePage extends Component {
           <h1> Welkom on this Shop </h1>
         </header>
         <main>
-          <o>hi</o>
+          <p>hi</p>
         </main>
       </div>
     );
