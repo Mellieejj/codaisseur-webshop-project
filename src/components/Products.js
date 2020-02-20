@@ -12,6 +12,7 @@ class Products extends Component {
     return (
       <div className="container">
         <h1>Products</h1>
+        <div className="searchBar"></div>
         <div className="wrapper">
           {this.props.products.map(dev => {
             return (
