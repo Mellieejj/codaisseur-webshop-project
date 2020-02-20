@@ -20,3 +20,10 @@ export function filterSearch(FilterString) {
     payload: FilterString
   };
 }
+
+export function cartAdd(id) {
+  return {
+    type: "CART_ADDED",
+    payload: id
+  };
+}

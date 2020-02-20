@@ -9,6 +9,17 @@ export default function productReducer(state = initialState, action) {
     case "CLICKED_IN_CART": {
       return { ...state };
     }
+
+    case "CART_ADDED": {
+      const productId = action.payload;
+      console.log("cat", action.payload);
+      const product = state.list.find(p => p.id === productId);
+      return {
+        ...state,
+        cart: [...state.cart, product]
+      };
+    }
+
     case "FITLER_SEARCH": {
       const searchString = action.payload;
 

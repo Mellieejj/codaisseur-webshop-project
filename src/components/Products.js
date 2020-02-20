@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchProducts } from "../store/products/actions";
+import { fetchProducts, cartAdd } from "../store/products/actions";
 import "./Products.css";
 import ProductBox from "./ProductBox";
 
@@ -8,6 +8,10 @@ class Products extends Component {
   componentDidMount() {
     this.props.dispatch(fetchProducts);
   }
+
+  clickHandler = id => {
+    this.props.dispatch(cartAdd(id));
+  };
 
   render() {
     const printList = this.props.products.map(dev => {
@@ -19,6 +23,7 @@ class Products extends Component {
           imgUrl={dev.imageUrl}
           price={dev.price}
           inStock={dev.inStock}
+          clickHandler={() => this.clickHandler(dev.id)}
         />
       );
     });
@@ -32,6 +37,7 @@ class Products extends Component {
           imgUrl={item.imageUrl}
           price={item.price}
           inStock={item.inStock}
+          clickHandler={() => this.clickHandler(item.id)}
         />
       );
     });
