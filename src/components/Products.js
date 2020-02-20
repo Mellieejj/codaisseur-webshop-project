@@ -10,19 +10,22 @@ class Products extends Component {
   }
   render() {
     return (
-      <div>
-        <p>Products</p>
-
-        {this.props.products.map(dev => {
-          return (
-            <ProductBox
-              id={dev.id}
-              name={dev.name}
-              imgUrl={dev.imageUrl}
-              price={dev.price}
-            />
-          );
-        })}
+      <div className="container">
+        <h1>Products</h1>
+        <div className="searchBar"></div>
+        <div className="wrapper">
+          {this.props.products.map(dev => {
+            return (
+              <ProductBox
+                id={dev.id}
+                name={dev.name}
+                imgUrl={dev.imageUrl}
+                price={dev.price}
+                inStock={dev.inStock}
+              />
+            );
+          })}
+        </div>
       </div>
     );
   }
