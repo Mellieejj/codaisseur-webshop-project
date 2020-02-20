@@ -12,19 +12,17 @@ class Products extends Component {
     return (
       <div>
         <p>Products</p>
-        <ProductBox />
-        {/* <ul>
-          {this.props.products.map(dev => {
-            // console.log("hello", this.props.products);
-            return (
-              <li key={dev.id}>
-                <p>{dev.name}</p>
-                <img src={dev.imageUrl} />
-                <p>€{dev.price}</p>
-              </li>
-            );
-          })}
-        </ul> */}
+
+        {this.props.products.map(dev => {
+          return (
+            <ProductBox
+              id={dev.id}
+              name={dev.name}
+              imgUrl={dev.imageUrl}
+              price={dev.price}
+            />
+          );
+        })}
       </div>
     );
   }
