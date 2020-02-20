@@ -8,6 +8,7 @@ class Products extends Component {
   componentDidMount() {
     this.props.dispatch(fetchProducts);
   }
+
   render() {
     return (
       <div className="container">
@@ -32,9 +33,9 @@ class Products extends Component {
 }
 
 function mapStateToProps(reduxState) {
-  console.log("redux", reduxState.products);
+  console.log("redux", reduxState.products.list);
   return {
-    products: reduxState.products
+    products: reduxState.products.list
   };
 }
 export default connect(mapStateToProps)(Products);
