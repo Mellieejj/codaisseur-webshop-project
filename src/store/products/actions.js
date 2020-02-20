@@ -1,4 +1,4 @@
-export default function productsFetched(product) {
+function productsFetched(product) {
   return {
     type: "FETCHED_PRODUCTS",
     payload: product
@@ -22,6 +22,7 @@ export function filterSearch(FilterString) {
 }
 
 export function cartAdd(id) {
+  //console.log(cartAdd);
   return {
     type: "CART_ADDED",
     payload: id

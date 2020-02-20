@@ -6,14 +6,11 @@ export default function productReducer(state = initialState, action) {
     case "FETCHED_PRODUCTS": {
       return { ...state, list: action.payload };
     }
-    case "CLICKED_IN_CART": {
-      return { ...state };
-    }
-
     case "CART_ADDED": {
       const productId = action.payload;
       console.log("cat", action.payload);
       const product = state.list.find(p => p.id === productId);
+
       return {
         ...state,
         cart: [...state.cart, product]
@@ -35,3 +32,10 @@ export default function productReducer(state = initialState, action) {
     }
   }
 }
+
+/*
+{
+  type: "CART_ADDED",
+  payload: productId
+}
+*/

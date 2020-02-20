@@ -55,7 +55,7 @@ class Products extends Component {
 }
 
 function mapStateToProps(reduxState) {
-  console.log("redux", reduxState.products.list);
+  //console.log("redux", reduxState.products.cart);
   return {
     products: reduxState.products.list,
     search: reduxState.products.search
