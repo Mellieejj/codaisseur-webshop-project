@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchProducts, cartAdd } from "../store/products/actions";
 import "./Products.css";
-import ProductBox from "./ProductBox";
+import ProductBox from "./Productbox";
 
 class Products extends Component {
   componentDidMount() {
