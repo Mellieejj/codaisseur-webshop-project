@@ -2,11 +2,6 @@ import React from "react";
 import "./ProductBox.css";
 
 export default class ProductBox extends React.Component {
-  clickHandler() {
-    console.log("this  is clicked");
-    this.props.products(this.props.id);
-  }
-
   render() {
     //console.log(this.props.products(this.props.id));
     const color = this.props.inStock ? "green" : "red";
@@ -17,7 +12,7 @@ export default class ProductBox extends React.Component {
         <p>{this.props.name} </p>
         <p>
           {this.props.price}{" "}
-          <button id="addToCart" onClick={this.clickHandler}>
+          <button id="addToCart" onClick={this.props.clickHandler}>
             <i className="fas fa-cart-plus"></i>
           </button>
         </p>
@@ -26,3 +21,12 @@ export default class ProductBox extends React.Component {
     );
   }
 }
+
+// function mapStateToProps(reduxState) {
+//   console.log("these are added", reduxState.products.cart);
+//   return {
+//     Cart: reduxState.products.cart
+//   };
+// }
+
+// export default connect(mapStateToProps)(ProductBox);
