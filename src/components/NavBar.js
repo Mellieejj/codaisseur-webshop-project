@@ -1,8 +1,24 @@
 import { Link } from "react-router-dom";
 import React, { Component } from "react";
 import "./NavBar.css";
+import { filterSearch } from "../store/products/actions";
+import { connect } from "react-redux";
 
-export default class NavBar extends Component {
+class NavBar extends Component {
+  state = {
+    search: ""
+  };
+  handleSearch = () => {
+    this.props.dispatch(filterSearch(this.state.search));
+  };
+
+  handleChange = e => {
+    // console.log("search typing: ", this.state.search);
+
+    this.setState({
+      search: e.target.value
+    });
+  };
   render() {
     return (
       <section className="nav">
@@ -27,7 +43,17 @@ export default class NavBar extends Component {
             </div>{" "}
           </Link>
         </div>
+        <input
+          type="text"
+          name="search"
+          placeholder="search for a product"
+          onChange={this.handleChange}
+          value={this.state.search}
+        />
+        <button onClick={this.handleSearch}>Search</button>
       </section>
     );
   }
 }
+
+export default connect()(NavBar);
