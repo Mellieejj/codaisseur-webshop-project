@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { cartAdd } from "../store/products/actions";
 
 class Cart extends Component {
   render() {
