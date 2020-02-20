@@ -10,23 +10,39 @@ class Products extends Component {
   }
 
   render() {
+    const printList = this.props.products.map(dev => {
+      return (
+        <ProductBox
+          key={dev.id}
+          id={dev.id}
+          name={dev.name}
+          imgUrl={dev.imageUrl}
+          price={dev.price}
+          inStock={dev.inStock}
+        />
+      );
+    });
+
+    const printSearch = this.props.search.map(item => {
+      return (
+        <ProductBox
+          key={item.id}
+          id={item.id}
+          name={item.name}
+          imgUrl={item.imageUrl}
+          price={item.price}
+          inStock={item.inStock}
+        />
+      );
+    });
+
+    let toRender = this.props.search.length === 0 ? printList : printSearch;
+
     return (
       <div className="container">
         <h1>Products</h1>
-        <div className="searchBar"></div>
-        <div className="wrapper">
-          {this.props.products.map(dev => {
-            return (
-              <ProductBox
-                id={dev.id}
-                name={dev.name}
-                imgUrl={dev.imageUrl}
-                price={dev.price}
-                inStock={dev.inStock}
-              />
-            );
-          })}
-        </div>
+
+        <div className="wrapper">{toRender}</div>
       </div>
     );
   }
@@ -35,7 +51,8 @@ class Products extends Component {
 function mapStateToProps(reduxState) {
   console.log("redux", reduxState.products.list);
   return {
-    products: reduxState.products.list
+    products: reduxState.products.list,
+    search: reduxState.products.search
   };
 }
 export default connect(mapStateToProps)(Products);

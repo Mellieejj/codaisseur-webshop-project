@@ -1,4 +1,4 @@
-const initialState = { list: [], cart: [] };
+const initialState = { list: [], cart: [], search: [] };
 
 export default function productReducer(state = initialState, action) {
   console.log(action);
@@ -8,6 +8,16 @@ export default function productReducer(state = initialState, action) {
     }
     case "CLICKED_IN_CART": {
       return { ...state };
+    }
+    case "FITLER_SEARCH": {
+      const searchString = action.payload;
+
+      return {
+        ...state,
+        search: state.list.filter(product => {
+          return product.name.toLowerCase().includes(searchString);
+        })
+      };
     }
     default: {
       return state;

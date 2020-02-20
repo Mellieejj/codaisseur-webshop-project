@@ -13,3 +13,10 @@ export function fetchProducts(dispatch, getState) {
       dispatch(productsFetched(product));
     });
 }
+
+export function filterSearch(FilterString) {
+  return {
+    type: "FITLER_SEARCH",
+    payload: FilterString
+  };
+}
