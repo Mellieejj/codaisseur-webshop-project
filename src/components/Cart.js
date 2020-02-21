@@ -3,13 +3,8 @@ import { connect } from "react-redux";
 import "./Cart.css";
 
 class Cart extends Component {
-  // productswithqty.reduce
-
   render() {
-    //const productswithqty = this.props.cart.map(a => ppa.id);
-
-    //console.log("id's", arr);
-    //console.log("incart", this.props.cart);
+    console.log("incart", this.productswithqty);
     return (
       <div>
         <h1>Your Cart</h1>
@@ -20,6 +15,8 @@ class Cart extends Component {
                 <img src={cart.imageUrl} />
                 <p>{cart.name}</p>
                 <p>€{cart.price}</p>
+                <p>Quantity:{cart.quantity}</p>
+                <p>{this.total}</p>
               </div>
             );
           })}
@@ -30,7 +27,7 @@ class Cart extends Component {
 }
 
 function mapStateToProps(reduxState) {
-  console.log("cartPage", reduxState.products.cart);
+  //console.log("cartPage", reduxState.products.cart);
   return {
     products: reduxState.products.list,
     cart: reduxState.products.cart

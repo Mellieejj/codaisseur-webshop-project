@@ -6,7 +6,7 @@ export default function productReducer(state = initialState, action) {
     case "FETCHED_PRODUCTS": {
       return { ...state, list: action.payload };
     }
-    case "ADD_TO_CART": {
+    case "CART_ADDED": {
       const productId = action.payload;
       const productCart = state.cart.find(p => p.id === productId);
 
