@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./Cart.css";
+import { cartAdd } from "../store/products/actions";
 
 class Cart extends Component {
+  // clickHandler = id => {
+  //   this.props.dispatch(cartAdd(id));
+  //   console.log("id", id);
+  // };
   render() {
     const total = this.props.cart.reduce((acc, curr) => {
       const newPrice = (
@@ -24,6 +29,9 @@ class Cart extends Component {
                 <p>€{cart.price}</p>
                 <p>Quantity:{cart.quantity}</p>
                 <p>{this.total}</p>
+                <button onClick={() => this.props.dispatch(cartAdd(cart.id))}>
+                  Add Quantity
+                </button>
               </div>
             );
           })}
