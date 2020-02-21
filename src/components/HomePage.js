@@ -1,14 +1,21 @@
 import React, { Component } from "react";
+import "./HomePage.css";
 
 export default class HomePage extends Component {
   render() {
     return (
-      <div className="wrapper">
-        <header>
-          <h1> Welkom on this Shop </h1>
+      <div>
+        <header className="wrapper">
+          <h1> Welkom in this Shop </h1>
         </header>
-        <main>
-          <p>hi</p>
+        <main className="foto-container">
+          <div className="categorie-buttons">
+            <div>Baby Teethers</div>
+            <div>Cuddle Cloth</div>
+            <div>Cuddle Toys</div>
+            <div>Keychains</div>
+          </div>
+          <div className="foto"></div>
         </main>
       </div>
     );

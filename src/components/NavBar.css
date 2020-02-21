@@ -16,7 +16,7 @@
 .dropdown__hover {
   display: inline-block;
   padding: 10px;
-  background: white;
+  background: #ccff99;
   color: #555555;
   cursor: pointer;
   text-align: center;
@@ -27,7 +27,7 @@
 }
 
 .dropdown__hover:hover {
-  background: black;
+  background: #a6ff4d;
   color: white;
 }
 

@@ -16,3 +16,14 @@
 .App-link {
   color: #61dafb;
 }
+
+.wrapper {
+  background-color: #ccff99;
+}
+
+.foto-container {
+  display: flexbox;
+}
+.nav {
+  background-color: #ccff99;
+}
