@@ -40,7 +40,8 @@ class NavBar extends Component {
           <Link to="/cart">
             <div className="dropdown">
               <div className="dropdown__hover">
-                Cart: {this.props.cart.length}{" "}
+                <i class="fas fa-shopping-cart"></i> Cart:{" "}
+                {this.props.cart.length}{" "}
               </div>
             </div>{" "}
           </Link>
