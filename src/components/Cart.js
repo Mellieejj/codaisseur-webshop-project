@@ -6,7 +6,7 @@ class Cart extends Component {
   // productswithqty.reduce
 
   render() {
-    //const productswithqty = this.props.cart.map(a => a.id);
+    //const productswithqty = this.props.cart.map(a => ppa.id);
 
     //console.log("id's", arr);
     console.log("incart", this.props.cart);
