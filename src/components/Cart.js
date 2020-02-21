@@ -1,24 +1,23 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import "./Cart.css";
 
 class Cart extends Component {
   render() {
     console.log("incart", this.props.cart);
     return (
       <div>
-        <h2>THIS IS YOUR CART</h2>
+        <h1>Your Cart</h1>
         <div>
-          <ul>
-            {this.props.cart.map(cart => {
-              return (
-                <li>
-                  <p>{cart.name}</p>
-                  <p>{cart.price}</p>
-                  <img src={cart.imageUrl} />
-                </li>
-              );
-            })}
-          </ul>
+          {this.props.cart.map(cart => {
+            return (
+              <div className="cartBox" id="cart.id">
+                <img src={cart.imageUrl} />
+                <p>{cart.name}</p>
+                <p>€{cart.price}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     );

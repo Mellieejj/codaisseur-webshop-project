@@ -1,0 +1,23 @@
+.foto-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: "foto foto tekst" "foto foto tekst";
+}
+
+.foto {
+  grid-area: foto;
+  min-height: 35rem;
+  background: url("https://www.haakdraak.nl/afbeeldingen/48.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: start;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.categorie-buttons {
+  display: block;
+}
