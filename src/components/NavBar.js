@@ -39,7 +39,9 @@ class NavBar extends Component {
         <div>
           <Link to="/cart">
             <div className="dropdown">
-              <div className="dropdown__hover">Cart</div>
+              <div className="dropdown__hover">
+                Cart: {this.props.cart.length}{" "}
+              </div>
             </div>{" "}
           </Link>
         </div>
@@ -56,4 +58,12 @@ class NavBar extends Component {
   }
 }
 
-export default connect()(NavBar);
+function mapStateToProps(reduxState) {
+  console.log("cartPage", reduxState.products.cart);
+  return {
+    products: reduxState.products.list,
+    cart: reduxState.products.cart
+  };
+}
+
+export default connect(mapStateToProps)(NavBar);
