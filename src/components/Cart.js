@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import "./Cart.css";
 
 class Cart extends Component {
@@ -26,7 +27,10 @@ class Cart extends Component {
             );
           })}
         </div>
-        Total price: € {total.toFixed(2)}
+        Total price: € {total.toFixed(2)}{" "}
+        <Link to="/checkout">
+          <button id="Checkout">Checkout</button>
+        </Link>
       </div>
     );
   }
