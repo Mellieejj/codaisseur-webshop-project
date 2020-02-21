@@ -6,15 +6,25 @@ export default function productReducer(state = initialState, action) {
     case "FETCHED_PRODUCTS": {
       return { ...state, list: action.payload };
     }
-    case "CART_ADDED": {
+    case "ADD_TO_CART": {
       const productId = action.payload;
-      console.log("cat", action.payload);
-      const product = state.list.find(p => p.id === productId);
+      const productCart = state.cart.find(p => p.id === productId);
 
-      return {
-        ...state,
-        cart: [...state.cart, product]
-      };
+      if (!productCart) {
+        const product = state.list.find(p => p.id === productId);
+        return {
+          ...state,
+          cart: [...state.cart, { ...product, quantity: 1 }]
+        };
+      } else {
+        const updatedCart = state.cart.map(p =>
+          p.id === productId ? { ...p, quantity: p.quantity + 1 } : p
+        );
+        return {
+          ...state,
+          cart: updatedCart
+        };
+      }
     }
 
     case "FITLER_SEARCH": {

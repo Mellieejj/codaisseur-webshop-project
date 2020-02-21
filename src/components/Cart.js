@@ -3,8 +3,12 @@ import { connect } from "react-redux";
 import "./ProductBox.css";
 
 class Cart extends Component {
-  //const productswithqty =
+  // productswithqty.reduce
+
   render() {
+    //const productswithqty = this.props.cart.map(a => a.id);
+
+    //console.log("id's", arr);
     console.log("incart", this.props.cart);
     return (
       <div>
