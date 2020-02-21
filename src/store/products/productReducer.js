@@ -27,6 +27,27 @@ export default function productReducer(state = initialState, action) {
       }
     }
 
+    case "CART_SUBTRACTED": {
+      const productId = action.payload;
+      const productCart = state.cart.find(p => p.id === productId);
+
+      if (!productCart) {
+        const product = state.list.find(p => p.id === productId);
+        return {
+          ...state,
+          cart: [...state.cart, { ...product, quantity: 1 }]
+        };
+      } else {
+        const updatedCart = state.cart.map(p =>
+          p.id === productId ? { ...p, quantity: p.quantity - 1 } : p
+        );
+        return {
+          ...state,
+          cart: updatedCart
+        };
+      }
+    }
+
     case "FITLER_SEARCH": {
       const searchString = action.payload;
 

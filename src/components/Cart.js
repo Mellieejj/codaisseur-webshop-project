@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./Cart.css";
-import { cartAdd } from "../store/products/actions";
+import { cartAdd, cartSubtract } from "../store/products/actions";
 
 class Cart extends Component {
   // clickHandler = id => {
@@ -31,6 +31,11 @@ class Cart extends Component {
                 <p>{this.total}</p>
                 <button onClick={() => this.props.dispatch(cartAdd(cart.id))}>
                   Add Quantity
+                </button>
+                <button
+                  onClick={() => this.props.dispatch(cartSubtract(cart.id))}
+                >
+                  Subtract Quantity
                 </button>
               </div>
             );

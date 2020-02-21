@@ -28,3 +28,11 @@ export function cartAdd(id) {
     payload: id
   };
 }
+
+export function cartSubtract(id) {
+  //console.log(cartAdd);
+  return {
+    type: "CART_SUBTRACTED",
+    payload: id
+  };
+}
