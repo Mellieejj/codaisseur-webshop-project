@@ -19,6 +19,7 @@ class NavBar extends Component {
       search: e.target.value
     });
   };
+
   render() {
     return (
       <section className="nav">

@@ -9,7 +9,7 @@ class Cart extends Component {
       return +newPrice + acc;
     }, 0);
 
-    console.log("incart", this.props.cart);
+    //console.log("incart", this.total);
     return (
       <div>
         <h1>Your Cart</h1>
