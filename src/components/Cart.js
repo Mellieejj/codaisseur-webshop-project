@@ -9,7 +9,7 @@ class Cart extends Component {
     //const productswithqty = this.props.cart.map(a => ppa.id);
 
     //console.log("id's", arr);
-    console.log("incart", this.props.cart);
+    //console.log("incart", this.props.cart);
     return (
       <div>
         <h1>Your Cart</h1>
