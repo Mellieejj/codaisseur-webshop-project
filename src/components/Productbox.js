@@ -11,7 +11,7 @@ export default class ProductBox extends React.Component {
         <img src={this.props.imgUrl} />
         <p>{this.props.name} </p>
         <p>
-          {this.props.price}{" "}
+          € {this.props.price}{" "}
           <button id="addToCart" onClick={this.props.clickHandler}>
             <i className="fas fa-cart-plus"></i>
           </button>

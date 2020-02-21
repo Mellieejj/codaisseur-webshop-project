@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import "./ProductBox.css";
+import "./Cart.css";
 
 class Cart extends Component {
   // productswithqty.reduce
@@ -12,19 +12,17 @@ class Cart extends Component {
     console.log("incart", this.props.cart);
     return (
       <div>
-        <h2>THIS IS YOUR CART</h2>
+        <h1>Your Cart</h1>
         <div>
-          <div className="cart">
-            {this.props.cart.map(cart => {
-              return (
-                <li>
-                  <p>{cart.name}</p>
-                  <p>{cart.price}</p>
-                  <img src={cart.imageUrl} />
-                </li>
-              );
-            })}
-          </div>
+          {this.props.cart.map(cart => {
+            return (
+              <div className="cartBox" id="cart.id">
+                <img src={cart.imageUrl} />
+                <p>{cart.name}</p>
+                <p>€{cart.price}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     );
