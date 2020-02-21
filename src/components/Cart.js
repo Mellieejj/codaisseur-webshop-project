@@ -4,6 +4,19 @@ import "./Cart.css";
 
 class Cart extends Component {
   render() {
+    const countedCart = {};
+    this.props.cart.forEach(function(product) {
+      if (countedCart[product.name]) {
+        countedCart[product.name].qty += 1;
+      } else {
+        countedCart[product.name] = {
+          product: product,
+          qty: 1
+        };
+      }
+    });
+
+    console.log("counting", countedCart);
     console.log("incart", this.props.cart);
     return (
       <div>
