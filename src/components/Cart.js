@@ -5,7 +5,9 @@ import "./Cart.css";
 class Cart extends Component {
   render() {
     const total = this.props.cart.reduce((acc, curr) => {
-      const newPrice = (Math.round(+curr.price * 100) / 100).toFixed(2);
+      const newPrice = (
+        Math.round(+(curr.price * curr.quantity) * 100) / 100
+      ).toFixed(2);
       return +newPrice + acc;
     }, 0);
 

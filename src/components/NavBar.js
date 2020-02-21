@@ -21,6 +21,11 @@ class NavBar extends Component {
   };
 
   render() {
+    const nu = this.props.cart.reduce((acc, crr) => {
+      return acc + crr.quantity;
+    }, 0);
+
+    console.log("hiiiiiii", nu);
     return (
       <section className="nav">
         <div>
@@ -41,8 +46,7 @@ class NavBar extends Component {
           <Link to="/cart">
             <div className="dropdown">
               <div className="dropdown__hover">
-                <i class="fas fa-shopping-cart"></i> Cart:{" "}
-                {this.props.cart.length}{" "}
+                <i class="fas fa-shopping-cart"></i> Cart: {nu}{" "}
               </div>
             </div>{" "}
           </Link>
