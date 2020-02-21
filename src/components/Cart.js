@@ -4,6 +4,11 @@ import "./Cart.css";
 
 class Cart extends Component {
   render() {
+    const total = this.props.cart.reduce((acc, curr) => {
+      const newPrice = (Math.round(+curr.price * 100) / 100).toFixed(2);
+      return +newPrice + acc;
+    }, 0);
+
     console.log("incart", this.props.cart);
     return (
       <div>
@@ -19,6 +24,7 @@ class Cart extends Component {
             );
           })}
         </div>
+        Total price: € {total.toFixed(2)}
       </div>
     );
   }
