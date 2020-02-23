@@ -46,7 +46,7 @@ class NavBar extends Component {
           <Link to="/cart">
             <div className="dropdown">
               <div className="dropdown__hover">
-                <i class="fas fa-shopping-cart"></i> Cart: {nu}{" "}
+                <i className="fas fa-shopping-cart"></i> Cart: {nu}{" "}
               </div>
             </div>{" "}
           </Link>
@@ -58,7 +58,11 @@ class NavBar extends Component {
           onChange={this.handleChange}
           value={this.state.search}
         />
-        <button onClick={this.handleSearch}>Search</button>
+        <Link path to="/products">
+          <button className="search-button" onClick={this.handleSearch}>
+            Search
+          </button>
+        </Link>
       </section>
     );
   }
