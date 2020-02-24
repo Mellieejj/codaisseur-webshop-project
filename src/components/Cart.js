@@ -20,28 +20,28 @@ class Cart extends Component {
     return (
       <div>
         <h1>Your Cart</h1>
-        <div>
+        <div className="wrapper">
           {this.props.cart.map(cart => {
             return (
               <div className="cartBox" id="cart.id">
                 <img src={cart.imageUrl} />
                 <p>{cart.name}</p>
                 <p>€{cart.price}</p>
-                <p>Quantity:{cart.quantity}</p>
+                <p>Quantity: {cart.quantity}</p>
                 <p>{this.total}</p>
                 <button onClick={() => this.props.dispatch(cartAdd(cart.id))}>
-                  Add Quantity
+                  <i className="fas fa-plus-circle"></i>
                 </button>
                 <button
                   onClick={() => this.props.dispatch(cartSubtract(cart.id))}
                 >
-                  Subtract Quantity
+                  <i className="fas fa-minus-circle"></i>
                 </button>
               </div>
             );
           })}
         </div>
-        Total price: € {total.toFixed(2)}
+        <div className="total">Total price: € {total.toFixed(2)}</div>
       </div>
     );
   }

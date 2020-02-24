@@ -10,6 +10,9 @@ export default class HomePage extends Component {
         </header>
         <main className="foto-container">
           <div className="categorie-buttons">
+            <div>
+              <h3>Product Categories</h3>
+            </div>
             <div>Baby Teethers</div>
             <div>Cuddle Cloth</div>
             <div>Cuddle Toys</div>

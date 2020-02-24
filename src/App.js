@@ -5,12 +5,14 @@ import NavBar from "./components/NavBar";
 import { Switch, Route } from "react-router-dom";
 import Products from "./components/Products";
 import Cart from "./components/Cart";
+import CheckoutForm from "./components/CheckoutForm";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
       <Switch>
+        <Route path="/cart/checkout" component={CheckoutForm} />
         <Route path="/products" component={Products} />
         <Route path="/cart" component={Cart} />
         <Route path="/" component={HomePage} />
