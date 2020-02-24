@@ -20,7 +20,7 @@ class Cart extends Component {
     return (
       <div>
         <h1>Your Cart</h1>
-        <div>
+        <div className="wrapper">
           {this.props.cart.map(cart => {
             return (
               <div className="cartBox" id="cart.id">
@@ -41,7 +41,7 @@ class Cart extends Component {
             );
           })}
         </div>
-        Total price: € {total.toFixed(2)}
+        <div className="total">Total price: € {total.toFixed(2)}</div>
       </div>
     );
   }
